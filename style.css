@@ -2,8 +2,6 @@
 
 *{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 body{
@@ -13,9 +11,23 @@ body{
     font-family: 'Arimo', sans-serif;
 }
 
+.add-btn{
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background-color: springgreen;
+    color: rgb(117, 34, 117);
+    border: none;
+    padding: .3rem .5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 2px 2px snow;
+}
+
 .note{
-    background-color: snow;
-    margin: 20px;
+    /* background-color: snow; */
+    margin: 20px 20px 60px 20px;
     height: 400px;
     width: 400px;
 }
@@ -37,15 +49,22 @@ body{
 }
 
 .note .markdown{
-    min-height: 400px;
-    min-width: 400px;
+    background-color: snow;
+    height: 400px;
+    width: 100%;
     overflow: hidden;
 }
 
 .note textarea{
-    min-height: 400px;
-    min-width: 400px;
+    background-color: snow;
+    box-shadow: 2px 2px 12px gray;
+    height: 400px;
+    width: 100%;
     border: none;
     outline: none;
     resize: none;
+}
+
+.hide{
+    display: none;
 }
