@@ -51,7 +51,8 @@ body{
 .note .markdown{
     background-color: snow;
     height: 400px;
-    width: 100%;
+    width: 400px;
+    padding: .3rem;
     overflow: hidden;
 }
 
