@@ -67,3 +67,18 @@ function updateLS(){
 
     localStorage.setItem('notes', JSON.stringify(notes));
 }
+
+// POPUP
+
+const btnX = document.querySelector('.btn-x');
+const popContainer = document.querySelector('.pop-container');
+const viewCs = document.querySelector('.view-cs');
+
+btnX.addEventListener('click', () => { 
+    console.log('clicks');
+    popContainer.classList.add('hide');
+});
+
+viewCs.addEventListener('click', () => {
+    popContainer.classList.remove('hide')
+})

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,700;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,700;1,500&family=Lobster&display=swap');
 
 *{
     box-sizing: border-box;
@@ -9,12 +9,37 @@ body{
     flex-wrap: wrap;
     background-color: skyblue;
     font-family: 'Arimo', sans-serif;
+    /* width: 100%; */
 }
 
-.add-btn{
+/* HEADER */
+header{
+    /* background-color: crimson; */
     position: fixed;
-    top: 2rem;
-    right: 2rem;
+    width: 100%;
+    /* text-align: center; */
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.headline{
+    grid-column: 2;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    color: rgb(117, 34, 117);
+    text-decoration: underline;
+    user-select: none;
+}
+
+.buttons{
+    grid-column: 3;
+    text-align: center;
+}
+
+.service-btn{
+    margin-right: .4rem;
     background-color: springgreen;
     color: rgb(117, 34, 117);
     border: none;
@@ -25,9 +50,11 @@ body{
     box-shadow: 2px 2px snow;
 }
 
+/* NOTES */
+
 .note{
     /* background-color: snow; */
-    margin: 20px 20px 60px 20px;
+    margin: 80px 20px 60px 20px;
     height: 400px;
     width: 400px;
 }
@@ -74,4 +101,61 @@ body{
 
 .hide{
     display: none;
+}
+
+/* pop-up */
+/* TODO: make pop up work and look good */
+.pop-container{
+    position: relative;
+    background-color: rgba(78, 78, 78, 0.288);
+    /* width: 100%;
+    height: 100%; */
+    padding: 1rem;
+    box-shadow: 0 0 20px gray;
+}
+
+.popup{
+    /* position: absolute; */
+    background-color: snow;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* table */
+.table{
+    border: 1px solid rgb(168, 167, 167);
+    margin: 0 auto;
+    width: 90%;
+    border-collapse: collapse;
+}
+
+thead{
+    background-color: springgreen;
+    color: rgb(117, 34, 117);
+}
+
+th{
+    font-size: 1.3rem;
+    border: 1px solid rgb(168, 167, 167);
+    padding: .7rem;
+}
+
+td{
+    border: 1px solid rgb(168, 167, 167);
+    padding: 20px;
+}
+
+.btn-x{
+    /* position: relative; */
+    display: block;
+    margin: auto calc(100% - 2rem);
+    background-color: transparent;
+    border: none;
+}
+
+.fa-window-close{
+    font-size: 2rem;
+    color: rgb(117, 34, 117);
+    cursor: pointer;
 }
