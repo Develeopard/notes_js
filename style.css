@@ -22,6 +22,7 @@ header{
     align-items: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
 }
 
 .headline{
@@ -106,10 +107,11 @@ header{
 /* pop-up */
 /* TODO: make pop up work and look good */
 .pop-container{
-    position: relative;
+    position: absolute;
     background-color: rgba(78, 78, 78, 0.288);
-    /* width: 100%;
-    height: 100%; */
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
     padding: 1rem;
     box-shadow: 0 0 20px gray;
 }
@@ -117,8 +119,8 @@ header{
 .popup{
     /* position: absolute; */
     background-color: snow;
-    width: 90%;
-    margin: 0 auto;
+    /* width: 90%;
+    height: 600px; */
     padding: 20px;
 }
 
@@ -158,4 +160,57 @@ td{
     font-size: 2rem;
     color: rgb(117, 34, 117);
     cursor: pointer;
+}
+
+/* MEDIAQ */
+@media(max-width: 976px){
+    .service-btn{
+        font-size: 0;
+    }
+
+    .fas.fa-plus{
+        font-size: 1.2rem;
+        position: relative;
+    }
+
+    .fas.fa-plus::after{
+        content: 'Add Note';
+        position: absolute;
+        display: block;
+        top: -.9rem; 
+        left: -400%;
+        padding: .3rem .7rem;
+        font-size: .7rem;
+        color: rgb(117, 34, 117);
+        background-color: snow;
+        transform: scale(0);
+    }
+
+    .fas.fa-plus:hover::after{
+        transform: scale(1);
+
+    }
+
+    .far.fa-clipboard{
+        font-size: 1.2rem;
+        position: relative;
+    }
+
+    .far.fa-clipboard::after{
+        content: 'View Cheatsheet';
+        position: absolute;
+        display: block;
+        top: -1.8rem; 
+        left: -400%;
+        padding: .3rem .7rem;
+        font-size: .7rem;
+        color: rgb(117, 34, 117);
+        background-color: snow;
+        transform: scale(0);
+    }
+
+    .far.fa-clipboard:hover::after{
+        transform: scale(1);
+
+    }
 }

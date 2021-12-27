@@ -74,11 +74,12 @@ const btnX = document.querySelector('.btn-x');
 const popContainer = document.querySelector('.pop-container');
 const viewCs = document.querySelector('.view-cs');
 
+
+viewCs.addEventListener('click', () => {
+    popContainer.classList.remove('hide');
+});
+
 btnX.addEventListener('click', () => { 
     console.log('clicks');
     popContainer.classList.add('hide');
 });
-
-viewCs.addEventListener('click', () => {
-    popContainer.classList.remove('hide')
-})
