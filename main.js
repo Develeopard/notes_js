@@ -2,6 +2,7 @@ const addBtn = document.querySelector('#add-btn');
 
 const notes = JSON.parse(localStorage.getItem('notes'))
 
+const body = document.getElementsByTagName('body')[0];
 
 if(notes){
     notes.forEach((note) => {
@@ -77,9 +78,10 @@ const viewCs = document.querySelector('.view-cs');
 
 viewCs.addEventListener('click', () => {
     popContainer.classList.remove('hide');
+    body.classList.add('scroll-stop');
 });
 
 btnX.addEventListener('click', () => { 
-    console.log('clicks');
     popContainer.classList.add('hide');
+    body.classList.remove('scroll-stop');
 });

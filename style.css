@@ -104,6 +104,12 @@ header{
     display: none;
 }
 
+.scroll-stop{
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
 /* pop-up */
 /* TODO: make pop up work and look good */
 .pop-container{
