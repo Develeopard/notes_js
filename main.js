@@ -4,6 +4,11 @@ const notes = JSON.parse(localStorage.getItem('notes'))
 
 const body = document.getElementsByTagName('body')[0];
 
+let today = new Date();
+// let currentTime = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()+' / '+today.getHours() + ":" + today.getMinutes();
+
+// console.log(currentTime);
+
 if(notes){
     notes.forEach((note) => {
         addNewNote(note)
@@ -55,6 +60,8 @@ function addNewNote(text = ''){
     })
 
     document.body.appendChild(note);
+
+
 }
 
 function updateLS(){
@@ -67,6 +74,13 @@ function updateLS(){
     });
 
     localStorage.setItem('notes', JSON.stringify(notes));
+
+    //timestamp
+    let object = {value: "value", timestamp: new Date().getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()+' / '+today.getHours() + ":" + today.getMinutes()}
+    localStorage.setItem("key", JSON.stringify(object));
+
+    console.log(object);
+
 }
 
 // POPUP
